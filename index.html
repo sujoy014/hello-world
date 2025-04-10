@@ -1,119 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Smart Skill Academy - Learn Digital Marketing Offline in Biswanath. Beginner-friendly, expert-led courses based on the latest 2025 curriculum." />
-  <meta name="keywords" content="Smart Skill Academy, Digital Marketing Course, Offline Classes, Biswanath, SEO, SMM, Google Ads, Email Marketing, Content Marketing" />
-  <meta name="author" content="Smart Skill Academy" />
-  <title>Smart Skill Academy | Learn Digital Marketing Offline in Biswanath</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <style>
-    .hero-bg {
-      background-image: url('https://tse4.mm.bing.net/th?id=OIP.bBgZKmm3C7HD6Yjhk4kh7QHaDt&pid=Api');
-      background-size: cover;
-      background-position: center;
-    }
-    .fade-in {
-      animation: fadeIn 2s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hover-scale:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Smart Skill Academy - Learn Digital Marketing Offline in Biswanath. Beginner-friendly, expert-led courses based on the latest 2025 curriculum." />
+    <meta name="keywords"
+        content="Smart Skill Academy, Digital Marketing Course, Offline Classes, Biswanath, SEO, SMM, Google Ads, Email Marketing, Content Marketing" />
+    <meta name="author" content="Smart Skill Academy" />
+    <title>Smart Skill Academy |
+        Learn Digital Marketing Offline in Biswanath</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .hero-bg {
+            background-image: url('https://tse4.mm.bing.net/th?id=OIP.bBgZKmm3C7HD6Yjhk4kh7QHaDt&pid=Api');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* --- Course Card Backgrounds --- */
+
+        /* Foundations of Digital Marketing */
+        .course-card:nth-child(1)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.6), rgba(255, 102, 0, 0.6));
+            /* Example: Orange-ish gradient */
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* SEO and SEM Mastery */
+        .course-card:nth-child(2)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 128, 255, 0.6), rgba(102, 0, 204, 0.6));
+            /* Example: Blue-Purple gradient */
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Social Media and Content Excellence */
+        .course-card:nth-child(3)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 51, 153, 0.6), rgba(204, 51, 0, 0.6));
+            /* Example: Pink-Red gradient */
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Email Marketing and Analytics */
+        .course-card:nth-child(4)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 204, 102, 0.6), rgba(0, 153, 51, 0.6));
+            /* Example: Green gradient */
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Future Trends */
+        .course-card:nth-child(8)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(153, 51, 255, 0.6), rgba(204, 153, 255, 0.6));
+            /* Example: Purple gradient */
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* General Card Styling */
+        .course-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h4 {
+            font-size: 1.25rem;
+            color: #374151;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .course-card p {
+            font-size: 1rem;
+            color: #6b7280;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900">
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-700">Smart Skill Academy</h1>
-      <a href="https://wa.me/91YOURNUMBER" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">📞 WhatsApp Us</a>
-    </div>
-  </header>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-700">Smart Skill Academy</h1>
+            <a href="https://wa.me/91YOURNUMBER" target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">📞 WhatsApp Us</a>
+        </div>
+    </header>
 
-  <section class="text-center py-20 px-4 hero-bg text-white fade-in">
-    <h2 class="text-4xl font-bold mb-4 drop-shadow">Master Digital Marketing in 2025</h2>
-    <p class="text-lg mb-6 max-w-2xl mx-auto drop-shadow">Join our hands-on offline course in Biswanath and get industry-ready with the latest tools, techniques, and trends in digital marketing.</p>
-    <a href="#courses" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Course Modules</a>
-  </section>
+    <section class="text-center py-20 px-4 hero-bg text-white fade-in">
+        <h2 class="text-4xl font-bold mb-4 drop-shadow">Master Digital Marketing in 2025</h2>
+        <p class="text-lg mb-6 max-w-2xl mx-auto drop-shadow">Join our hands-on offline course in Biswanath and get
+            industry-ready with the
+            latest tools, techniques, and trends in digital marketing.</p>
+        <a href="#courses" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Explore Course
+            Modules</a>
+    </section>
 
-  <section id="courses" class="py-12 max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-semibold text-center mb-10">Our Course Modules</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Module Cards -->
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 1: Foundations</h4>
-        <p>Understand what digital marketing is, its importance in 2025, and how various channels interconnect.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 2: SEO</h4>
-        <p>Master on-page & off-page SEO, keyword research, and tools like Google Analytics and Console.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 3: SEM</h4>
-        <p>Get started with Google Ads, understand PPC, bidding strategies, and quality score optimization.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 4: Social Media Marketing</h4>
-        <p>Explore strategies for Facebook, Instagram, LinkedIn, and others with hands-on campaign building.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 5: Content Marketing</h4>
-        <p>Learn blog writing, video strategy, content calendars, and how to build content that converts.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 6: Email Marketing</h4>
-        <p>Create effective email campaigns with segmentation, automation, and performance metrics.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 7: Analytics</h4>
-        <p>Track and analyze marketing data using free tools to improve decision-making and performance.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover-scale">
-        <h4 class="text-xl font-bold text-blue-600 mb-2">Module 8: Future Trends</h4>
-        <p>Discover emerging technologies like AI, voice search, AR/VR, and how to stay future-proof.</p>
-      </div>
-    </div>
-  </section>
+    <section id="courses" class="py-12 max-w-6xl mx-auto px-4">
+        <h3 class="text-3xl font-semibold text-center mb-10">Our Course Modules</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 1: Foundations</h4>
+                <p>Understand what digital marketing is, its importance in 2025, and
+                    how various channels interconnect.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 2: SEO</h4>
+                <p>Master on-page & off-page SEO, keyword research, and tools like Google Analytics and Console.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 3: SEM</h4>
+                <p>Get started with Google Ads, understand
+                    PPC, bidding strategies, and quality score optimization.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 4: Social Media Marketing</h4>
+                <p>Explore strategies for Facebook, Instagram, LinkedIn, and others with hands-on campaign building.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 5: Content Marketing</h4>
+                <p>Learn blog
+                    writing, video strategy, content calendars, and how to build content that converts.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 6: Email Marketing</h4>
+                <p>Create effective email campaigns with segmentation, automation, and performance metrics.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 7: Analytics</h4>
+                <p>Track
+                    and analyze marketing data using free tools to improve decision-making and performance.</p>
+            </div>
+            <div class="course-card">
+                <h4 class="text-xl font-bold text-blue-600 mb-2">Module 8: Future Trends</h4>
+                <p>Discover emerging technologies like AI, voice search, AR/VR, and how to stay future-proof.</p>
+            </div>
+        </div>
+    </section>
 
-  <section class="bg-white py-12 px-4 max-w-3xl mx-auto">
-    <h3 class="text-2xl font-semibold text-center mb-6">Enroll Now</h3>
-    <form class="grid grid-cols-1 gap-4">
-      <input type="text" placeholder="Full Name" class="p-3 border border-gray-300 rounded" required />
-      <input type="email" placeholder="Email Address" class="p-3 border border-gray-300 rounded" required />
-      <input type="tel" placeholder="Phone Number" class="p-3 border border-gray-300 rounded" required />
-      <textarea placeholder="Your Message" class="p-3 border border-gray-300 rounded" rows="4"></textarea>
-      <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Submit</button>
-    </form>
-  </section>
+    <section class="bg-white py-12 px-4 max-w-3xl mx-auto">
+        <h3 class="text-2xl font-semibold text-center mb-6">Enroll Now</h3>
+        <form class="grid grid-cols-1 gap-4">
 
-  <section class="bg-gray-100 py-12 px-4">
-    <h3 class="text-2xl font-semibold text-center mb-6">What Our Students Say</h3>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded shadow hover-scale">
-        <p class="mb-2 italic">"The classes are very practical and the trainer is really helpful!"</p>
-        <p class="font-bold">— Anjali R., Biswanath</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow hover-scale">
-        <p class="mb-2 italic">"Best offline digital marketing course in the city. Totally worth it!"</p>
-        <p class="font-bold">— Ramesh K., Biswanath</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow hover-scale">
-        <p class="mb-2 italic">"Loved the hands-on approach and the real-world tools we used."</p>
-        <p class="font-bold">— Priya M., Biswanath</p>
-      </div>
-    </div>
-  </section>
+            <input type="text" placeholder="Full Name" class="p-3 border border-gray-300 rounded" required />
+            <input type="email" placeholder="Email Address" class="p-3 border border-gray-300 rounded" required />
+            <input type="tel" placeholder="Phone Number" class="p-3 border border-gray-300 rounded" required />
+            <textarea placeholder="Your Message" class="p-3 border border-gray-300 rounded" rows="4"></textarea>
+            <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Submit</button>
+        </form>
+    </section>
 
-  <footer class="bg-blue-700 text-white py-6 mt-12">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p>© 2025 Smart Skill Academy. All rights reserved.</p>
-      <p>📍 Offline Classes in Biswanath | 📱 <a href="https://wa.me/91YOURNUMBER" class="underline">Chat on WhatsApp</a></p>
-    </div>
-  </footer>
+    <section class="bg-gray-100 py-12 px-4">
+        <h3 class="text-2xl font-semibold text-center mb-6">What Our Students Say</h3>
+        <div class="max-w-6xl mx-auto grid grid-cols-1
+    md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded shadow hover-scale">
+                <p class="mb-2 italic">"The classes are very practical and the trainer is really helpful!"</p>
+                <p class="font-bold">— Anjali R., Biswanath</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow hover-scale">
+                <p class="mb-2 italic">"Best offline digital marketing course in the city.
+                    Totally worth it!"</p>
+                <p class="font-bold">— Ramesh K., Biswanath</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow hover-scale">
+                <p class="mb-2 italic">"Loved the hands-on approach and the real-world tools we used."</p>
+                <p class="font-bold">— Priya M., Biswanath</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-700 text-white py-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>© 2025 Smart Skill Academy. All
+                rights reserved.</p>
+            <p>📍 Offline Classes in Biswanath | 📱 <a href="https://wa.me/91YOURNUMBER" class="underline">Chat on
+                    WhatsApp</a></p>
+        </div>
+    </footer>
 </body>
+
 </html>
